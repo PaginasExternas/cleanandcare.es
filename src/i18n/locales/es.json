@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "getQuote": "Cotizar"
+  },
+  "hero": {
+    "title": "Clean & Care",
+    "subtitle": "Servicio de Limpieza Profesional",
+    "description": "Transformamos tu espacio con servicios de limpieza profesional. Resultados impecables garantizados para hogares y oficinas.",
+    "cta": "Cotización Gratuita",
+    "services": "Ver Servicios"
+  },
+  "stats": {
+    "clients": "Clientes Satisfechos",
+    "service": "Servicio Disponible",
+    "rating": "Calificación Promedio"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones de limpieza profesional adaptadas a tus necesidades",
+    "residential": {
+      "title": "Limpieza Residencial",
+      "description": "Servicio completo de limpieza para hogares, manteniendo tu casa impecable y saludable."
+    },
+    "commercial": {
+      "title": "Limpieza Comercial", 
+      "description": "Mantén tu oficina o negocio en perfectas condiciones con nuestro servicio profesional."
+    },
+    "deep": {
+      "title": "Limpieza Profunda",
+      "description": "Limpieza intensiva que llega a cada rincón, perfecta para ocasiones especiales."
+    }
+  },
+  "cta": {
+    "title": "¿Listo para un Espacio Impecable?",
+    "description": "¡Únete a cientos de clientes satisfechos que confían en nosotros!",
+    "button": "Comenzar Ahora"
+  },
+  "about": {
+    "title": "Sobre Clean & Care",
+    "subtitle": "Tus expertos en limpieza de confianza con pasión por crear ambientes impecables y saludables",
+    "story": {
+      "title": "Nuestra Historia",
+      "content": "Fundada en 2020, Clean & Care comenzó con una misión simple: llevar alegría y frescura a cada espacio que tocamos. Lo que comenzó como un pequeño negocio familiar ha crecido hasta convertirse en el servicio de limpieza más confiable de Madrid, ¡sirviendo a más de 500 clientes felices!"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "content": "Brindar servicios excepcionales de limpieza que mejoren la calidad de vida, promuevan la salud y el bienestar, y den a nuestros clientes más tiempo para enfocarse en lo que más aman."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "quality": "Calidad Primero",
+      "reliable": "Confiables",
+      "eco": "Eco-Amigable",
+      "fast": "Rápidos"
+    }
+  },
+  "contact": {
+    "title": "¡Contáctanos!",
+    "subtitle": "¿Listo para transformar tu espacio? ¡Estamos aquí para ayudarte! Obtén tu cotización gratuita hoy",
+    "form": {
+      "title": "¡Obtén tu Cotización Gratuita!",
+      "name": "Tu Nombre",
+      "phone": "Número de Teléfono",
+      "email": "Correo Electrónico",
+      "service": "Tipo de Servicio",
+      "message": "Cuéntanos sobre tus necesidades de limpieza",
+      "submit": "Enviar Solicitud"
+    },
+    "info": {
+      "email": "Envíanos un Email",
+      "phone": "Llama o WhatsApp",
+      "area": "Área de Servicio",
+      "hours": "Horarios de Trabajo"
+    }
+  },
+  "footer": {
+    "description": "Tu socio de confianza para servicios de limpieza profesional. ¡Llevamos brillo y frescura a cada espacio que tocamos!",
+    "quickLinks": "Enlaces Rápidos",
+    "contactInfo": "Información de Contacto",
+    "rights": "Todos los derechos reservados"
+  },
+  "pages": {
+    "home": {
+      "title": "Clean & Care - Servicio de Limpieza Profesional",
+      "whyChoose": "¿Por Qué Elegirnos?",
+      "experience": "Experiencia y Calidad Garantizada"
+    },
+    "services": {
+      "title": "Nuestros Servicios - Clean & Care",
+      "hero": "Nuestros Servicios de Limpieza",
+      "description": "Desde hogares hasta oficinas, ofrecemos soluciones completas de limpieza que mantienen tu ambiente fresco, saludable e impecable.",
+      "list": {
+        "residential": {
+          "title": "Limpieza Residencial",
+          "description": "Limpieza completa del hogar incluyendo cocinas, baños, salas y dormitorios. ¡Perfecto para familias ocupadas!"
+        },
+        "commercial": {
+          "title": "Limpieza Comercial",
+          "description": "Limpieza profesional de oficinas y espacios comerciales para mantener un ambiente productivo y saludable."
+        },
+        "deep": {
+          "title": "Limpieza Profunda",
+          "description": "Servicio intensivo que llega a cada rincón, perfecto para limpieza estacional u ocasiones especiales."
+        },
+        "move": {
+          "title": "Limpieza de Mudanzas",
+          "description": "Limpieza integral para propiedades en transición. ¡Haz que tu nuevo lugar brille o recupera tu depósito!"
+        },
+        "construction": {
+          "title": "Post-Construcción",
+          "description": "Limpieza especializada para remover polvo, escombros y residuos de proyectos de renovación o construcción."
+        },
+        "window": {
+          "title": "Limpieza de Ventanas",
+          "description": "Servicio de limpieza cristalina para ventanas interiores y exteriores. ¡Deja que entre la luz!"
+        },
+        "carpet": {
+          "title": "Alfombras y Tapicería",
+          "description": "Limpieza profunda profesional para alfombras, tapetes y muebles para remover manchas y refrescar tus telas."
+        },
+        "eco": {
+          "title": "Limpieza Ecológica",
+          "description": "Soluciones de limpieza verde usando productos ambientalmente seguros. ¡Bueno para ti y el planeta!"
+        },
+        "emergency": {
+          "title": "Limpieza de Emergencia",
+          "description": "Respuesta rápida para situaciones urgentes. ¡Disponible 24/7 para desastres inesperados!"
+        }
+      }
+    },
+    "about": {
+      "title": "Sobre Nosotros - Clean & Care",
+      "hero": "Sobre Clean & Care",
+      "team": {
+        "title": "Conoce Nuestro Increíble Equipo",
+        "description": "Profesionales capacitados que son apasionados por hacer que tu espacio brille"
+      }
+    },
+    "contact": {
+      "title": "Contacto - Clean & Care",
+      "hero": "¡Hablemos!",
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "q1": "¿Qué tan rápido pueden empezar?",
+        "a1": "¡Usualmente en 24-48 horas! Para limpiezas de emergencia, a menudo podemos llegar el mismo día.",
+        "q2": "¿Cómo calculan los precios?",
+        "a2": "Basado en el tamaño del espacio, tipo de servicio y frecuencia. ¡Todas las cotizaciones son gratuitas y transparentes!",
+        "q3": "¿Están asegurados?",
+        "a3": "¡Absolutamente! Estamos completamente asegurados y con fianza para tu completa tranquilidad.",
+        "q4": "¿Usan productos eco-amigables?",
+        "a4": "¡Sí! Todos nuestros productos son seguros, no tóxicos y ambientalmente amigables."
+      }
+    }
+  }
+}

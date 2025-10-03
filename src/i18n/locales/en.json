@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "title": "Clean & Care",
+    "subtitle": "Professional Cleaning Service",
+    "description": "We transform your space with professional cleaning services. Immaculate results guaranteed for homes and offices.",
+    "cta": "Free Quote",
+    "services": "View Services"
+  },
+  "stats": {
+    "clients": "Satisfied Clients",
+    "service": "Service Available",
+    "rating": "Average Rating"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional cleaning solutions tailored to your needs",
+    "residential": {
+      "title": "Residential Cleaning",
+      "description": "Complete home cleaning service, keeping your house spotless and healthy."
+    },
+    "commercial": {
+      "title": "Commercial Cleaning", 
+      "description": "Keep your office or business in perfect condition with our professional service."
+    },
+    "deep": {
+      "title": "Deep Cleaning",
+      "description": "Intensive cleaning that reaches every corner, perfect for special occasions."
+    }
+  },
+  "cta": {
+    "title": "Ready for a Spotless Space?",
+    "description": "Join hundreds of satisfied customers who trust us!",
+    "button": "Get Started Now"
+  },
+  "about": {
+    "title": "About Clean & Care",
+    "subtitle": "Your trusted cleaning experts with a passion for creating spotless and healthy environments",
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in 2020, Clean & Care started with a simple mission: to bring joy and freshness to every space we touch. What began as a small family business has grown into Madrid's most trusted cleaning service, serving over 500 happy clients!"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide exceptional cleaning services that enhance quality of life, promote health and wellness, and give our clients more time to focus on what they love most."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality First",
+      "reliable": "Reliable",
+      "eco": "Eco-Friendly",
+      "fast": "Fast"
+    }
+  },
+  "contact": {
+    "title": "Contact Us!",
+    "subtitle": "Ready to transform your space? We're here to help! Get your free quote today",
+    "form": {
+      "title": "Get Your Free Quote!",
+      "name": "Your Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "service": "Service Type",
+      "message": "Tell us about your cleaning needs",
+      "submit": "Send Request"
+    },
+    "info": {
+      "email": "Send us an Email",
+      "phone": "Call or WhatsApp",
+      "area": "Service Area",
+      "hours": "Working Hours"
+    }
+  },
+  "footer": {
+    "description": "Your trusted partner for professional cleaning services. We bring shine and freshness to every space we touch!",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "rights": "All rights reserved."
+  },
+  "pages": {
+    "home": {
+      "title": "Clean & Care - Professional Cleaning Service",
+      "whyChoose": "Why Choose Us?",
+      "experience": "Experience and Guaranteed Quality"
+    },
+    "services": {
+      "title": "Our Services - Clean & Care",
+      "hero": "Our Cleaning Services",
+      "description": "From homes to offices, we offer complete cleaning solutions that keep your environment fresh, healthy and spotless.",
+      "list": {
+        "residential": {
+          "title": "Residential Cleaning",
+          "description": "Complete home cleaning including kitchens, bathrooms, living rooms and bedrooms. Perfect for busy families!"
+        },
+        "commercial": {
+          "title": "Commercial Cleaning",
+          "description": "Professional cleaning for offices and commercial spaces to maintain a productive and healthy environment."
+        },
+        "deep": {
+          "title": "Deep Cleaning",
+          "description": "Intensive service that reaches every corner, perfect for seasonal cleaning or special occasions."
+        },
+        "move": {
+          "title": "Move-in/Move-out Cleaning",
+          "description": "Comprehensive cleaning for properties in transition. Make your new place shine or get your deposit back!"
+        },
+        "construction": {
+          "title": "Post-Construction",
+          "description": "Specialized cleaning to remove dust, debris and residue from renovation or construction projects."
+        },
+        "window": {
+          "title": "Window Cleaning",
+          "description": "Crystal-clear cleaning service for interior and exterior windows. Let the light in!"
+        },
+        "carpet": {
+          "title": "Carpet & Upholstery",
+          "description": "Professional deep cleaning for carpets, rugs and furniture to remove stains and refresh your fabrics."
+        },
+        "eco": {
+          "title": "Eco-Friendly Cleaning",
+          "description": "Green cleaning solutions using environmentally safe products. Good for you and the planet!"
+        },
+        "emergency": {
+          "title": "Emergency Cleaning",
+          "description": "Quick response for urgent situations. Available 24/7 for unexpected disasters!"
+        }
+      }
+    },
+    "about": {
+      "title": "About Us - Clean & Care",
+      "hero": "About Clean & Care",
+      "team": {
+        "title": "Meet Our Amazing Team",
+        "description": "Trained professionals who are passionate about making your space shine"
+      }
+    },
+    "contact": {
+      "title": "Contact - Clean & Care",
+      "hero": "Let's Talk!",
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "How quickly can you start?",
+        "a1": "Usually within 24-48 hours! For emergency cleanings, we can often arrive the same day.",
+        "q2": "How do you calculate prices?",
+        "a2": "Based on space size, service type and frequency. All quotes are free and transparent!",
+        "q3": "Are you insured?",
+        "a3": "Absolutely! We are fully insured and bonded for your complete peace of mind.",
+        "q4": "Do you use eco-friendly products?",
+        "a4": "Yes! All our products are safe, non-toxic and environmentally friendly."
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+---
+// Detección automática del idioma preferido del usuario
+---
+
+<script>
+  // Función para detectar el idioma preferido del usuario
+  function getPreferredLanguage() {
+    // Verificar si hay idioma guardado en localStorage
+    const savedLang = localStorage.getItem('preferred-language');
+    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
+      return savedLang;
+    }
+    
+    // Detectar idioma del navegador
+    const browserLang = navigator.language || navigator.languages[0];
+    if (browserLang.startsWith('es')) {
+      return 'es';
+    } else if (browserLang.startsWith('en')) {
+      return 'en';
+    }
+    
+    // Idioma por defecto
+    return 'es';
+  }
+  
+  // Redirigir al idioma detectado
+  const preferredLang = getPreferredLanguage();
+  window.location.href = `/${preferredLang}/`;
+</script>
+
+<!-- Fallback para usuarios sin JavaScript - siempre español por defecto -->
+<meta http-equiv="refresh" content="0; url=/es/">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean & Care - Professional Cleaning Service</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .loading-container {
+      text-align: center;
+      color: white;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto 24px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .text {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .subtext {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p class="text">Clean & Care</p>
+    <p class="subtext">Redirecting / Redirigiendo...</p>
+  </div>
+</body>
+</html>

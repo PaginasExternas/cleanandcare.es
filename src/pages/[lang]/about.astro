@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}}
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('pages.about.title')}>
+  <!-- Hero Section -->
+  <section class="hero-professional relative overflow-hidden" transition:name="hero-section">
+    <div class="hero-overlay">
+      <div class="container-professional relative z-10 section-padding">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="animate-fade-in-up">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+              <span class="text-sm font-medium">{t('nav.about')}</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+              {t('pages.about.hero')}
+            </h1>
+            
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              {t('about.subtitle')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="animate-fade-in-up">
+          <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
+            <div class="accent-dot"></div>
+            <span class="text-sm font-semibold text-primary">{t('about.story.title')}</span>
+          </div>
+          <h2 class="text-4xl font-bold text-gradient-blue mb-6">{t('about.story.title')}</h2>
+          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+            {t('about.story.content')}
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient-blue">500+</div>
+              <div class="text-slate-600 text-sm">{t('stats.clients')}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient-blue">5⭐</div>
+              <div class="text-slate-600 text-sm">{t('stats.rating')}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient-blue">3+</div>
+              <div class="text-slate-600 text-sm">Años de Experiencia</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-slide-in-right">
+          <div class="card-professional-hover p-8 bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gradient-blue mb-4">{t('about.mission.title')}</h3>
+              <p class="text-slate-700 leading-relaxed">
+                {t('about.mission.content')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section-padding bg-white">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">{t('about.values.title')}</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">{t('about.values.title')}</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Los principios que guían todo lo que hacemos
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-blue-100 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-3">{t('about.values.quality')}</h3>
+          <p class="text-slate-600">Nunca comprometemos la calidad de nuestro trabajo. ¡Cada detalle importa!</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-3">{t('about.values.reliable')}</h3>
+          <p class="text-slate-600">Tu confianza es nuestro activo más valioso. Tratamos tu espacio como si fuera nuestro.</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-3">{t('about.values.eco')}</h3>
+          <p class="text-slate-600">Seguro para tu familia, mascotas y el planeta. ¡La limpieza verde es el futuro!</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-3">{t('about.values.fast')}</h3>
+          <p class="text-slate-600">A tiempo, siempre. Cuenta con nosotros para entregar resultados consistentes e increíbles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">{t('pages.about.team.title')}</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">{t('pages.about.team.title')}</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          {t('pages.about.team.description')}
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center card-professional-hover p-8">
+          <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-2">María González</h3>
+          <p class="text-primary font-semibold mb-3">Fundadora y CEO</p>
+          <p class="text-slate-600">Con más de 10 años en la industria de limpieza, María fundó Clean & Care para llevar servicios de limpieza profesionales y confiables.</p>
+        </div>
+        <div class="text-center card-professional-hover p-8">
+          <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-2">Carlos Rodríguez</h3>
+          <p class="text-primary font-semibold mb-3">Gerente de Operaciones</p>
+          <p class="text-slate-600">Carlos asegura que cada trabajo de limpieza cumpla con nuestros altos estándares. Su atención al detalle mantiene a nuestros clientes asombrados.</p>
+        </div>
+        <div class="text-center card-professional-hover p-8">
+          <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gradient-blue mb-2">Ana López</h3>
+          <p class="text-primary font-semibold mb-3">Supervisora de Calidad</p>
+          <p class="text-slate-600">La experiencia de Ana en métodos de limpieza eco-amigables asegura que cada espacio que limpiamos quede absolutamente perfecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="gradient-blue relative overflow-hidden">
+    <div class="hero-overlay section-padding">
+      <div class="container-professional text-center relative z-10">
+        <h3 class="text-4xl font-bold text-white mb-6">{t('cta.title')}</h3>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          {t('cta.description')}
+        </p>
+        <a href={`/${lang}/contact`} class="btn-accent text-lg px-10 py-4 inline-flex items-center space-x-2">
+          <span>{t('cta.button')}</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

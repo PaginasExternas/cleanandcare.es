@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+  
+  --yellow-400: #facc15;
+  --yellow-500: #eab308;
+  --yellow-600: #ca8a04;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  @apply font-semibold text-slate-900;
+}
+
+/* Professional Blue Theme */
+.bg-primary { background-color: var(--blue-600); }
+.bg-primary-light { background-color: var(--blue-500); }
+.bg-primary-dark { background-color: var(--blue-700); }
+.bg-accent { background-color: var(--yellow-500); }
+
+.text-primary { color: var(--blue-600); }
+.text-primary-light { color: var(--blue-500); }
+.text-primary-dark { color: var(--blue-700); }
+.text-accent { color: var(--yellow-600); }
+
+/* Professional Components */
+.card-professional {
+  @apply bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.card-professional-hover {
+  @apply card-professional hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-slate-50 text-blue-600 border-2 border-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-accent {
+  @apply bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2;
+}
+
+/* Professional Gradients */
+.gradient-blue {
+  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 100%);
+}
+
+.gradient-blue-light {
+  background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%);
+}
+
+.gradient-blue-subtle {
+  background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Professional Header */
+.header-professional {
+  @apply bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm;
+}
+
+/* Professional Sections */
+.section-padding {
+  @apply py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.container-professional {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Professional Hero */
+.hero-professional {
+  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(30, 58, 138, 0.95) 100%);
+}
+
+/* Professional Cards with Blue Theme */
+.service-card-pro {
+  @apply bg-white border border-slate-200 rounded-xl p-6 shadow-sm;
+  transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, box-shadow;
+}
+
+.service-card-pro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 10px 20px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(59, 130, 246, 0.05);
+}
+
+.service-icon-pro {
+  @apply w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl font-semibold mb-4 transition-all duration-300;
+}
+
+/* Group hover effects - using standard CSS instead of @apply */
+.service-card-pro:hover .service-icon-pro {
+  background-color: var(--blue-600);
+  color: white;
+}
+
+/* Professional Stats */
+.stat-card-pro {
+  @apply bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20;
+}
+
+/* Professional Form */
+.form-professional input,
+.form-professional select,
+.form-professional textarea {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 bg-white;
+}
+
+.form-professional label {
+  @apply block text-sm font-medium text-slate-700 mb-2;
+}
+
+/* Language Selector */
+.lang-selector {
+  @apply inline-flex items-center space-x-2 px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors duration-200 text-sm font-medium text-slate-700;
+}
+
+/* Professional Footer */
+.footer-professional {
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-950) 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+
+/* Professional Hover Effects */
+.hover-lift {
+  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+.hover-glow {
+  transition: box-shadow 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: box-shadow;
+}
+
+/* Professional Accent Elements */
+.accent-bar {
+  @apply w-16 h-1 bg-yellow-500 rounded-full;
+}
+
+.accent-dot {
+  @apply w-2 h-2 bg-yellow-500 rounded-full;
+}

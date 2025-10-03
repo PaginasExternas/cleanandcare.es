@@ -1,0 +1,180 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}}
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('pages.services.title')}>
+  <!-- Hero Section -->
+  <section class="hero-professional relative overflow-hidden" transition:name="hero-section">
+    <div class="hero-overlay">
+      <div class="container-professional relative z-10 section-padding">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="animate-fade-in-up">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+              <span class="text-sm font-medium">{t('nav.services')}</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+              {t('pages.services.hero')}
+            </h1>
+            
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              {t('pages.services.description')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">{t('services.title')}</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">{t('services.title')}</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          {t('services.subtitle')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ServiceCard 
+          title={t('pages.services.list.residential.title')} 
+          description={t('pages.services.list.residential.description')}
+          iconType="home"
+          price="€25/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.commercial.title')} 
+          description={t('pages.services.list.commercial.description')}
+          iconType="office"
+          price="€35/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.deep.title')} 
+          description={t('pages.services.list.deep.description')}
+          iconType="deep"
+          price="€45/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.move.title')} 
+          description={t('pages.services.list.move.description')}
+          iconType="move"
+          price="€50/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.construction.title')} 
+          description={t('pages.services.list.construction.description')}
+          iconType="construction"
+          price="€40/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.window.title')} 
+          description={t('pages.services.list.window.description')}
+          iconType="window"
+          price="€20/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.carpet.title')} 
+          description={t('pages.services.list.carpet.description')}
+          iconType="carpet"
+          price="€30/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.eco.title')} 
+          description={t('pages.services.list.eco.description')}
+          iconType="eco"
+          price="€28/hr"
+        />
+        <ServiceCard 
+          title={t('pages.services.list.emergency.title')} 
+          description={t('pages.services.list.emergency.description')}
+          iconType="emergency"
+          price="€60/hr"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section-padding bg-white">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">{t('pages.home.whyChoose')}</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-blue-100 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-slate-900">{t('about.values.fast')}</h3>
+          <p class="text-slate-600">Tiempo de respuesta rápido sin comprometer la calidad</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-slate-900">{t('about.values.reliable')}</h3>
+          <p class="text-slate-600">Protección completa para tu total tranquilidad</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-slate-900">{t('about.values.eco')}</h3>
+          <p class="text-slate-600">Productos seguros y no tóxicos para la limpieza</p>
+        </div>
+        <div class="text-center card-professional p-8 hover-lift">
+          <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-slate-900">{t('about.values.quality')}</h3>
+          <p class="text-slate-600">¡No estamos felices hasta que tú lo estés!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="gradient-blue relative overflow-hidden">
+    <div class="hero-overlay section-padding">
+      <div class="container-professional text-center relative z-10">
+        <h3 class="text-4xl font-bold text-white mb-6">{t('cta.title')}</h3>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          {t('cta.description')}
+        </p>
+        <a href={`/${lang}/contact`} class="btn-accent text-lg px-10 py-4 inline-flex items-center space-x-2">
+          <span>{t('cta.button')}</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
