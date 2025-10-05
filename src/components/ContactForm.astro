@@ -1,8 +1,13 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+// Recibir el idioma como prop desde la página padre
+export interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang as keyof typeof import('../i18n/ui').ui);
 ---
 
 <div class="max-w-2xl mx-auto">

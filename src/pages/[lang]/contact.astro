@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ContactForm from '../../components/ContactForm.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/ui';
+import { useTranslations } from '../../i18n/ui';
 
 export function getStaticPaths() {
   return [
@@ -10,8 +10,9 @@ export function getStaticPaths() {
   ];
 }
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+// Usar el parámetro lang directamente en lugar de getLangFromUrl
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof import('../../i18n/ui').ui);
 ---
 
 <Layout title={t('pages.contact.title')}>
@@ -50,7 +51,7 @@ const t = useTranslations(lang);
               <h2 class="text-3xl font-bold text-gradient-blue mb-4">{t('contact.form.title')}</h2>
               <p class="text-slate-600">Completa este formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
             </div>
-            <ContactForm />
+            <ContactForm lang={lang} />
           </div>
         </div>
 

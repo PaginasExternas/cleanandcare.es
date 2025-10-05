@@ -1,42 +1,11 @@
----
-// Detección automática del idioma preferido del usuario
----
-
-<script>
-  // Función para detectar el idioma preferido del usuario
-  function getPreferredLanguage() {
-    // Verificar si hay idioma guardado en localStorage
-    const savedLang = localStorage.getItem('preferred-language');
-    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
-      return savedLang;
-    }
-    
-    // Detectar idioma del navegador
-    const browserLang = navigator.language || navigator.languages[0];
-    if (browserLang.startsWith('es')) {
-      return 'es';
-    } else if (browserLang.startsWith('en')) {
-      return 'en';
-    }
-    
-    // Idioma por defecto
-    return 'es';
-  }
-  
-  // Redirigir al idioma detectado
-  const preferredLang = getPreferredLanguage();
-  window.location.href = `/${preferredLang}/`;
-</script>
-
-<!-- Fallback para usuarios sin JavaScript - siempre español por defecto -->
-<meta http-equiv="refresh" content="0; url=/es/">
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clean & Care - Professional Cleaning Service</title>
+  <title>Clean & Care - Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=https://paginasexternas.github.io/cleanandcare.es/es/">
+  <link rel="canonical" href="https://paginasexternas.github.io/cleanandcare.es/es/">
   <style>
     body {
       margin: 0;
@@ -78,7 +47,12 @@
   <div class="loading-container">
     <div class="spinner"></div>
     <p class="text">Clean & Care</p>
-    <p class="subtext">Redirecting / Redirigiendo...</p>
+    <p class="subtext">Redirigiendo... / Redirecting...</p>
   </div>
+  
+  <script>
+    // Redirección inmediata por JavaScript como backup
+    window.location.href = 'https://paginasexternas.github.io/cleanandcare.es/es/';
+  </script>
 </body>
 </html>

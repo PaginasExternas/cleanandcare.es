@@ -14,8 +14,42 @@ export const ui = {
 } as const;
 
 export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split('/');
-  if (lang in ui) return lang as keyof typeof ui;
+  let pathname = url.pathname;
+  
+  // Obtener la base URL dinámicamente
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  
+  // Debug logs
+  console.log('🔍 Debug getLangFromUrl:');
+  console.log('  Original pathname:', pathname);
+  console.log('  BASE_URL:', baseUrl);
+  
+  // Remover la base URL si está presente (para GitHub Pages)
+  if (baseUrl !== '/' && pathname.startsWith(baseUrl)) {
+    pathname = pathname.substring(baseUrl.length);
+    console.log('  Pathname after removing BASE_URL:', pathname);
+  }
+  
+  // Asegurar que pathname empiece con /
+  if (!pathname.startsWith('/')) {
+    pathname = '/' + pathname;
+  }
+  
+  // Ahora extraer el idioma de la ruta limpia
+  const segments = pathname.split('/').filter(segment => segment !== '');
+  const lang = segments[0];
+  
+  console.log('  Segments:', segments);
+  console.log('  Detected lang:', lang);
+  console.log('  Is lang in ui?', lang && lang in ui);
+  
+  // Verificar si el primer segmento es un idioma válido
+  if (lang && lang in ui) {
+    console.log('  ✅ Returning detected lang:', lang);
+    return lang as keyof typeof ui;
+  }
+  
+  console.log('  ⚠️ Fallback to default lang:', defaultLang);
   return defaultLang;
 }
 
