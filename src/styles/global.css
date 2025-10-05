@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Professional Stats */
 .stat-card-pro {
-  @apply bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20;
+  @apply flex flex-col justify-center bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20;
 }
 
 /* Professional Form */
