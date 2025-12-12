@@ -1,0 +1,20 @@
+{
+    "clients": [
+        {
+            "name": "Mercado San Luis La Villa",
+            "imageUrl": "mercado-san-luis-la-villa.jpg"
+        },
+        {
+            "name": "Comunidad de Propietarios Edificio Monterroso",
+            "imageUrl": "comunidad-propietarios-edificio-monterroso.jpg"
+        },
+        {
+            "name": "Comunidad de Propietarios Marina de Casares Suites",
+            "imageUrl": "comunidad-propietarios-marina-de-casares-suites.jpg"
+        },
+        {
+            "name": "Cortijo San Francisco",
+            "imageUrl": "cortijo-san-francisco.jpg"
+        }
+    ]
+}

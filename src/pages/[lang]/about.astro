@@ -53,7 +53,13 @@ const baseUrl = import.meta.env.BASE_URL;
           </div>
           <h2 class="text-4xl font-bold text-gradient-blue mb-6">{t('about.story.title')}</h2>
           <p class="text-lg text-slate-700 mb-6 leading-relaxed">
-            {t('about.story.content')}
+            En 2007 empezamos nuestra aventura con la idea de prestar servicios de limpieza personalizados y ajustados a las necesidades de comunidades de propietarios, espacios comerciales, villas, obras nueva y un largo etc.
+          </p>
+          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+            A diario trabajamos para crecer como empresa que apuesta por el buen servicio sin descuidar lo más importante que es nuestro equipo humano, sin ellos sería imposible.
+          </p>
+          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+            Trabajamos para que nuestra plantilla en la medida de lo posible no tenga problemas de conciliación adaptando los horarios según sus necesidades, flexibilizando horarios de entrada y salida para cada caso en particular.
           </p>
           <div class="grid grid-cols-3 gap-6">
             <div class="text-center">
@@ -90,8 +96,50 @@ const baseUrl = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- Values Section -->
+  <!-- Corporate Image Section -->
   <section class="section-padding bg-white">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">Imagen Corporativa</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-6">Nuestra Imagen Corporativa</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Así empezamos en 2007, evolucionando hasta hoy
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Logo Antiguo -->
+        <div class="animate-fade-in-up">
+          <div class="card-professional-hover p-12 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex flex-col items-center justify-center h-80">
+            <img src={`${baseUrl}logo-2007.jpg`} alt="Logo Clean & Care" class="h-32 mb-6 drop-shadow-lg">
+            <h3 class="text-2xl font-bold text-gradient-blue mb-2">2007</h3>
+            <p class="text-slate-600 text-center">Logo Original<br><span class="text-sm">Nuestros inicios</span></p>
+          </div>
+        </div>
+
+        <!-- Logo Nuevo -->
+        <div class="animate-slide-in-right">
+          <div class="card-professional-hover p-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl flex flex-col items-center justify-center h-80">
+            <img src={`${baseUrl}logo-clean-and-care.png`} alt="Logo Clean & Care Actual" class="h-32 mb-6 drop-shadow-lg">
+            <h3 class="text-2xl font-bold text-gradient-blue mb-2">2024</h3>
+            <p class="text-slate-600 text-center">Logo Actual<br><span class="text-sm">Moderna y profesional</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          A lo largo de estos años, hemos evolucionado nuestro identidad visual manteniendo los valores fundamentales que nos definen. Nuestro nuevo logo refleja el crecimiento, la modernidad y el compromiso profesional que caracteriza a Clean & Care en la actualidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section-padding bg-gradient-blue-subtle">
     <div class="container-professional">
       <div class="text-center mb-16">
         <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">

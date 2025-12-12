@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 import { useTranslations } from '../../i18n/ui';
+import clientsData from '../../i18n/clients.json';
 
 export function getStaticPaths() {
   return [
@@ -38,11 +38,9 @@ if (Astro.url.pathname === '/') {
               <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
               <span class="text-sm font-medium">{t('hero.subtitle')}</span>
             </div>
-            
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              {t('hero.title')}
-            </h1>
-            
+
+            <img src={`${baseUrl}logo-clean-and-care.png`} alt="Clean & Care Logo" class="m-auto">
+
             <p class="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto">
               {t('hero.description')}
             </p>
@@ -81,7 +79,7 @@ if (Astro.url.pathname === '/') {
   </section>
 
   <!-- Services Preview Professional -->
-  <section class="section-padding gradient-blue-subtle">
+  <!-- <section class="section-padding gradient-blue-subtle">
     <div class="container-professional">
       <div class="text-center mb-16">
         <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
@@ -115,7 +113,7 @@ if (Astro.url.pathname === '/') {
         />
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Why Choose Us Professional -->
   <section class="section-padding bg-white">
@@ -193,7 +191,334 @@ if (Astro.url.pathname === '/') {
     </div>
   </section>
 
-  <!-- CTA Section Professional -->
+  <!-- Team & Tools Section Professional -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-slide-in-left">
+          <div class="card-professional-hover p-8 bg-gradient-to-br from-green-50 to-green-100">
+            <div class="text-center">
+              <div class="w-full h-96 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6 border-2 border-green-300">
+                <img 
+                  src={`${baseUrl}image/equipo-herramientas.jpg`} 
+                  alt="Equipo y Herramientas"
+                  class="h-full object-cover rounded-lg"
+                />
+              </div>
+              <div class="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.172l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gradient-blue mb-4">
+                Equipo y Herramientas
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Apostamos por la calidad en cada detalle
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-fade-in-up">
+          <div class="inline-flex items-center space-x-2 bg-green-100 rounded-full px-4 py-2 mb-6">
+            <div class="accent-dot bg-green-600"></div>
+            <span class="text-sm font-semibold text-green-600">Recursos Humanos</span>
+          </div>
+          <h2 class="text-4xl font-bold text-gradient-blue mb-6">
+            Equipo humano y herramientas de trabajo
+          </h2>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Apostamos por dotar a nuestro personal de equipos de trabajo ergonómicos y herramientas de calidad para una mejor ejecución de las tareas previniendo la aparición de lesiones.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Equipos Ergonómicos</h3>
+                <p class="text-slate-600">Herramientas diseñadas para el confort y la seguridad</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Prevención de Lesiones</h3>
+                <p class="text-slate-600">Cuidamos la salud de nuestro equipo</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Herramientas de Calidad</h3>
+                <p class="text-slate-600">Materiales profesionales para resultados óptimos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Safety Section Professional -->
+  <section class="section-padding bg-white">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">Seguridad y Formación</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">Herramientas y Orden</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Uso de EPIs adecuados
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-in-up">
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Creemos que implantar el sistema know-how, la formación en prevención de riesgos laborales y formación continua nos permite poner en práctica nuevas técnicas y el uso de materiales más tecnológicos nos permite disminuir las lesiones de nuestro mejor capital que es el equipo humano y reducir el impacto ambiental.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Formación Continua</h3>
+                <p class="text-slate-600">Capacitación en prevención de riesgos laborales</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">EPIs Adecuados</h3>
+                <p class="text-slate-600">Equipos de protección personal certificados</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Técnicas Innovadoras</h3>
+                <p class="text-slate-600">Materiales tecnológicos y procedimientos avanzados</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Impacto Ambiental Reducido</h3>
+                <p class="text-slate-600">Compromiso con la sostenibilidad y el medio ambiente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-slide-in-right">
+          <div class="card-professional-hover p-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+            <div class="text-center">
+              <div class="w-full h-96 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl flex items-center justify-center mb-6 border-2 border-blue-300 overflow-hidden">
+                <img 
+                  src={`${baseUrl}image/herramientas-seguridad.jpg`} 
+                  alt="Herramientas y Seguridad"
+                  class="h-full rounded-lg"
+                />
+              </div>
+              <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gradient-blue mb-4">
+                Seguridad Garantizada
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Nuestro equipo cuenta con las mejores herramientas, formación y protección para realizar su trabajo de manera segura y eficiente
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio/Works Section Professional -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
+          <div class="accent-dot"></div>
+          <span class="text-sm font-semibold text-primary">Portfolio</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4">Trabajos Realizados</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Conoce algunos de nuestros proyectos más destacados
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-in-up">
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Nuestro equipo se encuentra formado y capacitado para el uso de equipos profesionales y maquinaria para la ejecución de las tareas.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Equipos Profesionales</h3>
+                <p class="text-slate-600">Maquinaria de última generación para resultados impecables</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Equipo Capacitado</h3>
+                <p class="text-slate-600">Personal formado en técnicas avanzadas de limpieza</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1">Resultados Garantizados</h3>
+                <p class="text-slate-600">Satisfacción y excelencia en cada proyecto</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-slide-in-right">
+          <div class="card-professional-hover p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10 text-center">
+              <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gradient-blue mb-4">
+                Ver Videos
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Clic en la imagen para ver nuestros trabajos en video
+              </p>
+              <div class="mt-6 flex justify-center">
+                <a href={`${baseUrl}${lang}/gallery`} class="text-primary font-semibold hover:text-purple-600 transition-colors flex items-center space-x-2">
+                  <span>Galería de trabajos</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section Professional -->
+  <section class="section-padding gradient-blue-subtle">
+    <div class="container-professional">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div class="animate-fade-in-up">
+          <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
+            <div class="accent-dot"></div>
+            <span class="text-sm font-semibold text-primary">Confianza Comprobada</span>
+          </div>
+          <h2 class="text-4xl font-bold text-gradient-blue mb-4">Algunos de Nuestros Clientes</h2>
+          <p class="text-xl text-slate-600 mb-8">
+            Empresas y comunidades que confían en Clean & Care
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Desde comunidades de propietarios hasta grandes espacios comerciales, nuestros clientes nos confían sus necesidades de limpieza más exigentes.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
+        {clientsData.clients.map((client) => (
+          <div class="flex flex-col card-professional-hover bg-white rounded-lg overflow-hidden border border-slate-200 h-full">
+            <div class="w-full h-40 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden relative">
+              <img 
+                src={`${baseUrl}client/${client.imageUrl}`} 
+                alt={client.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 text-center m-auto">
+              <h3 class="font-semibold text-slate-900 text-sm">{client.name}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-slate-600 mb-6 text-lg">
+          Desde comunidades de propietarios hasta grandes espacios comerciales, nuestros clientes nos confían sus necesidades de limpieza.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`${baseUrl}${lang}/contact`} class="btn-accent text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
+            <span>Únete a Nuestros Clientes</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href={`${baseUrl}${lang}/about`} class="btn-secondary text-lg px-8 py-4 bg-white border-2 border-primary text-primary hover:bg-blue-50">
+            Conoce Más Sobre Nosotros
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Original CTA Section Professional -->
   <section class="gradient-blue relative overflow-hidden">
     <div class="hero-overlay section-padding">
       <div class="container-professional text-center relative z-10">
