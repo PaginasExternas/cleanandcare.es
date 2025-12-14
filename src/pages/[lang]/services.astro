@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import TitleSection from '../../components/TitleSection.astro';
 import { useTranslations } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -18,29 +19,8 @@ const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title={t('pages.services.title')}>
-  <!-- Hero Section -->
-  <section class="hero-professional relative overflow-hidden" transition:name="hero-section">
-    <div class="hero-overlay">
-      <div class="container-professional relative z-10 section-padding">
-        <div class="max-w-4xl mx-auto text-center text-white">
-          <div class="animate-fade-in-up">
-            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-              <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-              <span class="text-sm font-medium">{t('nav.services')}</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
-              {t('pages.services.hero')}
-            </h1>
-            
-            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              {t('pages.services.description')}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <TitleSection  title={t('pages.services.hero')} subtitle={t('pages.services.description')} />
 
   <!-- Services Grid
   <section class="section-padding gradient-blue-subtle">
@@ -119,10 +99,6 @@ const baseUrl = import.meta.env.BASE_URL;
   <section class="section-padding bg-white">
     <div class="container-professional">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
-          <div class="accent-dot"></div>
-          <span class="text-sm font-semibold text-primary">Servicios Especializados</span>
-        </div>
         <h2 class="text-4xl font-bold text-gradient-blue p-1 mb-4">Trabajos Especiales</h2>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
           Soluciones profesionales para desafíos específicos de limpieza
