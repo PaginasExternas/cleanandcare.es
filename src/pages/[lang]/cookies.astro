@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}}
+  ];
+}
+const { lang } = Astro.params;
+---
+
+<Layout title="Política de Cookies">
+  <section class="section-padding bg-white">
+    <div class="container-professional max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-gradient-blue mb-8 text-center">Política de Cookies</h1>
+      <div class="prose prose-blue max-w-none text-slate-700">
+        <p><strong>Reserva de cookies</strong></p>
+        <p>INES MARIA GAZQUEZ GODOY se reserva el derecho de utilizar cookies en la navegación del usuario por sus websites para facilitar la personalización y comodidad de la navegación.</p>
+        <p>Siguiendo la política de protección de datos de la empresa, INES MARIA GAZQUEZ GODOY informa que las cookies se asocian al usuario anónimo y a su ordenador, y no proporcionan por sí el nombre y apellidos del usuario.</p>
+        <p>El usuario tiene la posibilidad de configurar su navegador de modo que se le informe de la recepción de cookies, pudiendo, si así lo desea, impedir que sean instaladas en su disco duro. No obstante, para el acceso a las websites de INES MARIA GAZQUEZ GODOY no será preceptiva la instalación de cookies.</p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'es'}},
+    {params: {lang: 'en'}}
+  ];
+}
+const { lang } = Astro.params;
+---
+
+<Layout title="Política de Privacidad">
+  <section class="section-padding bg-white">
+    <div class="container-professional max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-gradient-blue mb-8 text-center">Política de Privacidad</h1>
+      <div class="prose prose-blue max-w-none text-slate-700">
+        <p><strong>CONDICIONES DE USO PÁGINA WEB</strong></p>
+        <p>“En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, INES MARIA GAZQUEZ GODOY le informa de que es titular de los websites WWW.CLEANANDCARE.ES. De acuerdo con la exigencia del artículo 10 de la citada Ley, INES MARIA GAZQUEZ GODOY informa de los siguientes datos: El titular de esta página web es INES MARIA GAZQUEZ GODOY , con CIF 77455525N y domicilio social en SEVERO OCHOA, 70 BLOQUE 3 6o C ESTEPONA 29680, La dirección de correo electrónico de contacto con la empresa es info@cleanandcare.es.</p>
+        <p class="mt-4"><strong>Protección de datos</strong></p>
+        <p>De conformidad con lo que establece la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal, INES MARIA GAZQUEZ GODOY informa a los usuarios de sus websites de que los datos personales recabados por la empresa mediante los formularios sitos en sus páginas, serán introducidos en un fichero automatizado bajo la responsabilidad de INES MARIA GAZQUEZ GODOY ,con la finalidad de poder facilitar, agilizar y cumplir los compromisos establecidos entre ambas partes.</p>
+        <p>Así mismo, INES MARIA GAZQUEZ GODOY informa de la posibilidad de ejercer los derechos de acceso, cancelación, rectificación y oposición mediante un escrito a la dirección SEVERO OCHOA, 70 BLOQUE 3 6o C ESTEPONA 29680.</p>
+        <p>Mientras no nos comunique lo contrario, entenderemos que sus datos no han sido modificados, que usted se compromete a notificarnos cualquier variación y que tenemos el consentimiento para utilizarlos a fin de poder fidelizar la relación entre las partes.</p>
+        <p class="mt-4"><strong>Cláusula a incluir en el formulario de contacto web</strong></p>
+        <p>Le informamos que los datos personales obtenidos mediante este formulario, así como su dirección de correo electrónico, han sido incorporados en un fichero del cual es responsable INES MARIA GAZQUEZ GODOY con la finalidad de atender sus consultas y enviarle información relacionada con la entidad que pudiera ser de su interés. INES MARIA GAZQUEZ GODOY se compromete a usar los datos recogidos mediante este formulario, únicamente para la finalidad anteriormente mencionada.</p>
+        <p>El interesado declara tener conocimiento del destino y uso de los datos personales recogidos mediante la lectura de la presente cláusula.<br>El envío de este e-mail implica la aceptación de las cláusulas expuestas.<br>Si desea ejercer los derechos de acceso, rectificación, cancelación u oposición en los términos establecidos en la Ley Orgánica 15/1999 puede dirigirse a SEVERO OCHOA, 70 BLOQUE 3 6o C ESTEPONA 29680.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
