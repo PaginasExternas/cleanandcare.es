@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
 import { useTranslations } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -147,11 +146,11 @@ const baseUrl = import.meta.env.BASE_URL;
           <div class="flex gap-4 mb-4">
             <div class="grid grid-cols-2 gap-4 w-full">
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-amber-700 shadow w-full h-36">
-                <img src="/service/stain/before.jpg" alt="Eliminación de manchas - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/stain/before.jpg"} alt="Eliminación de manchas - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-amber-700 bg-opacity-90 text-white">Antes</span>
               </div>
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-amber-700 shadow w-full h-36">
-                <img src="/service/stain/after.jpg" alt="Eliminación de manchas - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/stain/after.jpg"} alt="Eliminación de manchas - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-amber-700 bg-opacity-90 text-white">Después</span>
               </div>
             </div>
@@ -197,11 +196,11 @@ const baseUrl = import.meta.env.BASE_URL;
           <div class="flex gap-4 mb-4">
             <div class="grid grid-cols-2 gap-4 w-full">
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-slate-700 shadow w-full h-36">
-                <img src="/service/patina/before.jpg" alt="Eliminación de pátina - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/patina/before.jpg"} alt="Eliminación de pátina - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-slate-700 bg-opacity-90 text-white">Antes</span>
               </div>
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-slate-700 shadow w-full h-36">
-                <img src="/service/patina/after.jpg" alt="Eliminación de pátina - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/patina/after.jpg"} alt="Eliminación de pátina - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-slate-700 bg-opacity-90 text-white">Después</span>
               </div>
             </div>
@@ -247,11 +246,11 @@ const baseUrl = import.meta.env.BASE_URL;
           <div class="flex gap-4 mb-4">
             <div class="grid grid-cols-2 gap-4 w-full">
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-indigo-700 shadow w-full h-36">
-                <img src="/service/forklift/before.jpg" alt="Limpieza de montacargas - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/forklift/before.jpg"} alt="Limpieza de montacargas - antes" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-indigo-700 bg-opacity-90 text-white">Antes</span>
               </div>
               <div class="relative flex flex-col items-center overflow-hidden rounded-xl border border-indigo-700 shadow w-full h-36">
-                <img src="/service/forklift/after.jpg" alt="Limpieza de montacargas - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={baseUrl+"service/forklift/after.jpg"} alt="Limpieza de montacargas - después" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <span class="absolute bottom-0 left-0 right-0 text-center py-2 text-sm font-bold tracking-wide uppercase bg-indigo-700 bg-opacity-90 text-white">Después</span>
               </div>
             </div>
@@ -295,7 +294,7 @@ const baseUrl = import.meta.env.BASE_URL;
             </div>
           </div>
           <div class="flex gap-4 mb-4">
-            <img src="/service/height-cleaning.png" alt="Limpieza de altura ejemplo" class="rounded-lg w-full h-60 object-cover" loading="lazy" />
+            <img src={baseUrl+"service/height-cleaning.png"} alt="Limpieza de altura ejemplo" class="rounded-lg w-full h-60 object-cover" loading="lazy" />
           </div>
           <p class="text-slate-600 leading-relaxed mb-6">
             Nuestro equipo cuenta con la titulación necesaria para el manejo y uso de maquinaria para la realización de limpiezas de altura seguras.
