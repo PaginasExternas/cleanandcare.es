@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import TitleSection from '../../components/TitleSection.astro';
 import { useTranslations } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -18,39 +19,14 @@ const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title={t('pages.about.title')}>
-  <!-- Hero Section -->
-  <section class="hero-professional relative overflow-hidden" transition:name="hero-section">
-    <div class="hero-overlay">
-      <div class="container-professional relative z-10 section-padding">
-        <div class="max-w-4xl mx-auto text-center text-white">
-          <div class="animate-fade-in-up">
-            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-              <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-              <span class="text-sm font-medium">{t('nav.about')}</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
-              {t('pages.about.hero')}
-            </h1>
-            
-            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              {t('about.subtitle')}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <TitleSection  title={t('pages.about.hero')} subtitle={t('about.subtitle')} />
 
   <!-- Story Section -->
   <section class="section-padding gradient-blue-subtle">
     <div class="container-professional">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="animate-fade-in-up">
-          <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
-            <div class="accent-dot"></div>
-            <span class="text-sm font-semibold text-primary">{t('about.story.title')}</span>
-          </div>
           <h2 class="text-4xl font-bold text-gradient-blue mb-6">{t('about.story.title')}</h2>
           <p class="text-lg text-slate-700 mb-6 leading-relaxed">
             En 2007 empezamos nuestra aventura con la idea de prestar servicios de limpieza personalizados y ajustados a las necesidades de comunidades de propietarios, espacios comerciales, villas, obras nueva y un largo etc.
@@ -61,7 +37,7 @@ const baseUrl = import.meta.env.BASE_URL;
           <p class="text-lg text-slate-700 mb-6 leading-relaxed">
             Trabajamos para que nuestra plantilla en la medida de lo posible no tenga problemas de conciliación adaptando los horarios según sus necesidades, flexibilizando horarios de entrada y salida para cada caso en particular.
           </p>
-          <div class="grid grid-cols-3 gap-6">
+          <!-- <div class="grid grid-cols-3 gap-6">
             <div class="text-center">
               <div class="text-3xl font-bold text-gradient-blue">500+</div>
               <div class="text-slate-600 text-sm">{t('stats.clients')}</div>
@@ -74,7 +50,7 @@ const baseUrl = import.meta.env.BASE_URL;
               <div class="text-3xl font-bold text-gradient-blue">3+</div>
               <div class="text-slate-600 text-sm">Años de Experiencia</div>
             </div>
-          </div>
+          </div> -->
         </div>
         
         <div class="animate-slide-in-right">
@@ -100,10 +76,6 @@ const baseUrl = import.meta.env.BASE_URL;
   <section class="section-padding bg-white">
     <div class="container-professional">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
-          <div class="accent-dot"></div>
-          <span class="text-sm font-semibold text-primary">Imagen Corporativa</span>
-        </div>
         <h2 class="text-4xl font-bold text-gradient-blue mb-6">Nuestra Imagen Corporativa</h2>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
           Así empezamos en 2007, evolucionando hasta hoy
@@ -142,10 +114,6 @@ const baseUrl = import.meta.env.BASE_URL;
   <section class="section-padding bg-gradient-blue-subtle">
     <div class="container-professional">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
-          <div class="accent-dot"></div>
-          <span class="text-sm font-semibold text-primary">{t('about.values.title')}</span>
-        </div>
         <h2 class="text-4xl font-bold text-gradient-blue mb-4">{t('about.values.title')}</h2>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
           Los principios que guían todo lo que hacemos
@@ -194,7 +162,7 @@ const baseUrl = import.meta.env.BASE_URL;
   </section>
 
   <!-- Team Section -->
-  <section class="section-padding gradient-blue-subtle">
+  <!-- <section class="section-padding gradient-blue-subtle">
     <div class="container-professional">
       <div class="text-center mb-16">
         <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
@@ -240,7 +208,7 @@ const baseUrl = import.meta.env.BASE_URL;
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CTA Section -->
   <section class="gradient-blue relative overflow-hidden">
