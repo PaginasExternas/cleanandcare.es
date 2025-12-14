@@ -34,10 +34,6 @@ if (Astro.url.pathname === '/') {
       <div class="container-professional relative z-10 section-padding">
         <div class="max-w-4xl mx-auto text-center text-white">
           <div class="animate-fade-in-up">
-            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-              <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-              <span class="text-sm font-medium">{t('hero.subtitle')}</span>
-            </div>
 
             <img src={`${baseUrl}logo-clean-and-care.png`} alt="Clean & Care Logo" class="m-auto">
 
@@ -45,7 +41,7 @@ if (Astro.url.pathname === '/') {
               {t('hero.description')}
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`${baseUrl}${lang}/contact`} class="btn-accent text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
@@ -58,7 +54,7 @@ if (Astro.url.pathname === '/') {
             </div>
 
             <!-- Professional Stats -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div class="stat-card-pro">
                 <div class="text-4xl font-bold text-yellow-400 mb-2">500+</div>
                 <div class="text-blue-200 font-medium">{t('stats.clients')}</div>
@@ -71,7 +67,7 @@ if (Astro.url.pathname === '/') {
                 <div class="text-4xl font-bold text-yellow-400 mb-2">5★</div>
                 <div class="text-blue-200 font-medium">{t('stats.rating')}</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -120,11 +116,8 @@ if (Astro.url.pathname === '/') {
     <div class="container-professional">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="animate-fade-in-up">
-          <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
-            <div class="accent-dot"></div>
-            <span class="text-sm font-semibold text-primary">{t('pages.home.whyChoose')}</span>
-          </div>
-          <h2 class="text-4xl font-bold text-gradient-blue mb-6">
+
+          <h2 class="text-4xl font-bold text-gradient-blue mb-6 p-1">
             {t('pages.home.experience')}
           </h2>
           <p class="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -198,7 +191,7 @@ if (Astro.url.pathname === '/') {
         <div class="animate-slide-in-left">
           <div class="card-professional-hover p-8 bg-gradient-to-br from-green-50 to-green-100">
             <div class="text-center">
-              <div class="w-full h-96 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6 border-2 border-green-300">
+              <div class="m-auto h-96 bg-green-200 rounded-xl p-4 inline-block mb-6">
                 <img 
                   src={`${baseUrl}image/equipo-herramientas.jpg`} 
                   alt="Equipo y Herramientas"
@@ -221,11 +214,8 @@ if (Astro.url.pathname === '/') {
         </div>
         
         <div class="animate-fade-in-up">
-          <div class="inline-flex items-center space-x-2 bg-green-100 rounded-full px-4 py-2 mb-6">
-            <div class="accent-dot bg-green-600"></div>
-            <span class="text-sm font-semibold text-green-600">Recursos Humanos</span>
-          </div>
-          <h2 class="text-4xl font-bold text-gradient-blue mb-6">
+
+          <h2 class="text-4xl font-bold text-gradient-blue mb-6 p-1">
             Equipo humano y herramientas de trabajo
           </h2>
           <p class="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -278,11 +268,7 @@ if (Astro.url.pathname === '/') {
   <section class="section-padding bg-white">
     <div class="container-professional">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
-          <div class="accent-dot"></div>
-          <span class="text-sm font-semibold text-primary">Seguridad y Formación</span>
-        </div>
-        <h2 class="text-4xl font-bold text-gradient-blue mb-4">Herramientas y Orden</h2>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4 p-1">Herramientas y Orden</h2>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
           Uso de EPIs adecuados
         </p>
@@ -348,7 +334,7 @@ if (Astro.url.pathname === '/') {
         <div class="animate-slide-in-right">
           <div class="card-professional-hover p-8 bg-gradient-to-br from-blue-50 to-indigo-100">
             <div class="text-center">
-              <div class="w-full h-96 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl flex items-center justify-center mb-6 border-2 border-blue-300 overflow-hidden">
+              <div class="m-auto h-96 bg-blue-200 rounded-xl p-4 inline-block mb-6">
                 <img 
                   src={`${baseUrl}image/herramientas-seguridad.jpg`} 
                   alt="Herramientas y Seguridad"
@@ -377,11 +363,7 @@ if (Astro.url.pathname === '/') {
   <section class="section-padding gradient-blue-subtle">
     <div class="container-professional">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
-          <div class="accent-dot"></div>
-          <span class="text-sm font-semibold text-primary">Portfolio</span>
-        </div>
-        <h2 class="text-4xl font-bold text-gradient-blue mb-4">Trabajos Realizados</h2>
+        <h2 class="text-4xl font-bold text-gradient-blue mb-4 p-1">Trabajos Realizados</h2>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
           Conoce algunos de nuestros proyectos más destacados
         </p>
@@ -464,15 +446,11 @@ if (Astro.url.pathname === '/') {
   </section>
 
   <!-- Clients Section Professional -->
-  <section class="section-padding gradient-blue-subtle">
+  <section class="section-padding">
     <div class="container-professional">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
         <div class="animate-fade-in-up">
-          <div class="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
-            <div class="accent-dot"></div>
-            <span class="text-sm font-semibold text-primary">Confianza Comprobada</span>
-          </div>
-          <h2 class="text-4xl font-bold text-gradient-blue mb-4">Algunos de Nuestros Clientes</h2>
+          <h2 class="text-4xl font-bold text-gradient-blue mb-4 p-1">Algunos de Nuestros Clientes</h2>
           <p class="text-xl text-slate-600 mb-8">
             Empresas y comunidades que confían en Clean & Care
           </p>
