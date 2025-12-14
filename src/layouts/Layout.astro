@@ -28,7 +28,7 @@ const siteUrl = import.meta.env.SITE || 'https://paginasexternas.github.io';
     <link rel="alternate" hreflang="es" href={`${siteUrl}${baseUrl}es/`} />
     <link rel="alternate" hreflang="en" href={`${siteUrl}${baseUrl}en/`} />
     <link rel="icon" type="image/png" href={`${baseUrl}logo-clean-and-care.png`} />
-    <base href={import.meta.env.BASE_URL}>
+    <base href={baseUrl != '/'?`${siteUrl}${baseUrl}/`:''}>
     <ViewTransitions />
   </head>
   <body class="bg-slate-50">
