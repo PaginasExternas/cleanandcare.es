@@ -1,0 +1,29 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle  } = Astro.props;
+
+---
+
+  <!-- Hero Section -->
+  <section class="hero-professional relative overflow-hidden" transition:name="hero-section">
+    <div class="hero-overlay">
+      <div class="container-professional relative z-10 section-padding">
+        <div class="max-w-4xl mx-auto text-center text-white p-8">
+          <div class="animate-fade-in-up">
+
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+              {title}
+            </h1>
+            
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
