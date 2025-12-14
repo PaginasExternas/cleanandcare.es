@@ -38,7 +38,8 @@ const t = useTranslations(lang as keyof typeof import('../../i18n/ui').ui);
         <!-- Contact Info -->
         <div class="animate-slide-in-right">
           <div class="space-y-8">
-            <div class="card-professional p-8 hover-lift">
+
+            <a href="mailto:info@cleanandcare.es" class="block card-professional p-8 hover-lift">
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-blue-100 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,12 +49,11 @@ const t = useTranslations(lang as keyof typeof import('../../i18n/ui').ui);
                 <div>
                   <h3 class="text-xl font-bold text-gradient-blue mb-2">{t('contact.info.email')}</h3>
                   <p class="text-slate-600 mb-2">hola@cleanandcare.es</p>
-                  <p class="text-sm text-slate-500">Respuesta en 24 horas</p>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="card-professional p-8 hover-lift">
+            <a href="tel:+34691553603" class="block card-professional p-8 hover-lift">
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,10 +63,9 @@ const t = useTranslations(lang as keyof typeof import('../../i18n/ui').ui);
                 <div>
                   <h3 class="text-xl font-bold text-gradient-blue mb-2">{t('contact.info.phone')}</h3>
                   <p class="text-slate-600 mb-2">+34 612 345 678</p>
-                  <p class="text-sm text-slate-500">Lunes - Domingo, 7:00 - 22:00</p>
                 </div>
               </div>
-            </div>
+            </a>
 
             <div class="card-professional p-8 hover-lift">
               <div class="flex items-start space-x-4">
@@ -78,27 +77,18 @@ const t = useTranslations(lang as keyof typeof import('../../i18n/ui').ui);
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gradient-blue mb-2">{t('contact.info.area')}</h3>
-                  <p class="text-slate-600 mb-2">Madrid y Área Metropolitana</p>
-                  <p class="text-sm text-slate-500">Radio de 30km desde el centro</p>
+                  <p class="text-slate-600 mb-2">Ofrecemos nuestro servicios en toda la Costa del Sol. Nuestros principales clientes se ubican en las siguientes localidades.</p>
+                  <ul class="text-sm text-slate-500">
+                    <li>Estepona</li>
+                    <li>Casares</li>
+                    <li>Marbella</li>
+                    <li>Puerto Banus</li>
+                    <li>Sotogrande</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="card-professional p-8 hover-lift">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-gradient-blue mb-2">{t('contact.info.hours')}</h3>
-                  <p class="text-slate-600 mb-1">Lunes - Viernes: 7:00 - 22:00</p>
-                  <p class="text-slate-600 mb-2">Sábado - Domingo: 8:00 - 20:00</p>
-                  <p class="text-sm text-slate-500">¡Emergencias disponibles 24/7!</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
